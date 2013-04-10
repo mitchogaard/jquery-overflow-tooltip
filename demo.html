@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Overflow Tooltip</title>
+		<style>
+			table {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+
+			td {
+				border: 1px solid black;
+				overflow: hidden;
+				padding: 5px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				max-width: 150px;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="jquery.overflowtooltip.min.js"></script>
+		<script>
+			$(function () {
+				$('td').overflowTooltip();
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery Overflow Tooltip</h1>
+		<p>Mouse over some of the cells below. Only the ones that overflow should pop up a tool tip.</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>This one is overflowing a little.</td>
+					<td>Some other cells.</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>Not overflowing.</td>
+					<td>Other data.</td>
+					<td>100</td>
+				</tr>
+				<tr>
+					<td>Overflowing overflowing overflowing overflowing overflowing overflowing.</td>
+					<td>Some other cells, but this one overflows.</td>
+					<td>1000</td>
+				</tr>
+				<tr>
+					<td>Not overflowing.</td>
+					<td>Other data.</td>
+					<td>10000</td>
+				</tr>
+				<tr>
+					<td>Not overflowing.</td>
+					<td>Some other cells.</td>
+					<td>100000</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
